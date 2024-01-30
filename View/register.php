@@ -1,5 +1,6 @@
 
 <form method="post" enctype="multipart/form-data">
+    <h3>Inscription</h3>
     Prénom: <input type="text" name="firstname" required><br>
     Nom: <input type="text" name="lastname" required><br>
     Email: <input type="email" name="email" required><br>

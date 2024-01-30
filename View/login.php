@@ -1,7 +1,6 @@
 <div class="container">
     <form action="?page=login" method="post">
-        <img src="assets/images/Favicon.jpg" alt="Logo du restaurant" class="icon-menu">
-        <h3>Page de connexion</h3>
+        <h3>Connexion</h3>
         <label for="email">Entrez votre email : </label>
         <input type="email" id="email" name="email" autofocus placeholder="Email" id="username" required/>
 
