@@ -20,6 +20,7 @@ $availableRoutes = [
 'edit_categorie',
 'delete_categorie',
 'add_product',
+'edit_product',
 'delete_product'
 ];
 /* echo 'page: '.$_GET['page']; */
@@ -30,7 +31,7 @@ if (isset($_GET['page']) && in_array($_GET['page'], $availableRoutes)) {
     //die($route);
 }
 
-$verifLoggedRoutes = ['login', 'homepage', 'show_student', 'register', 'allproducts', 'add_categorie','edit_categorie','delete_categorie','add_product','delete_product', 'shoppingcart'];
+$verifLoggedRoutes = ['login', 'homepage', 'show_student', 'register', 'allproducts', 'add_categorie','edit_categorie','delete_categorie','add_product','delete_product', 'shoppingcart', 'edit_product'];
 
 if (!isset($_SESSION['logged']) && !in_array($_GET['page'], $verifLoggedRoutes)) {
     header('location: ?page=homepage');

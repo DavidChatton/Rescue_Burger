@@ -19,7 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['token']) && $_POST['t
 
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['logged'] = true;
-
         $_SESSION['admin'] = $user['is_admin'];
         
         header('Location: ?page=homepage');

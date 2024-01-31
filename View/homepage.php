@@ -12,10 +12,9 @@
                     <?php } ?>
                     <div class="card-content">
                             <div class="card-end">
-                                <?php if (isset($_SESSION['admin']) && $_SESSION['admin']) { ?>
-                                    <div class="card-title-categorie">
-
-                                            <h2> <?= $categorie['name'] ?> </h2>
+                                <div class="card-title-categorie">
+                                    <?php if (isset($_SESSION['admin']) && $_SESSION['admin']) { ?>
+                                    
 
                                             <div class="card-icones">
                                                 <a href="?page=edit_categorie&categorie_id=<?= $categorie['id'] ?>">
@@ -28,7 +27,7 @@
                                             </div>      
                                         
                                 <?php } ?>
-                                    </div>
+                                </div>
 
                                 <h2> <?= $categorie['name'] ?> </h2>
                                 <?= $categorie['description'] ?>

@@ -26,9 +26,9 @@
                 </label>
 
                 <nav class="navbar">
-                    <a href="?page=homepage" style="--i:0;">Acceuil</a>
+                    <a href="?page=homepage" style="--i:0;">Accueil</a>
                    <!--  style="--i:3;" -->
-                    <a href="#" style="--i:4;">Contact</a>
+                    <a href="?page=contact" style="--i:2;">Contact</a>
 
                     <?php if (!isset($_SESSION['logged']) || !$_SESSION['logged']) { ?>
                         <a href="?page=login" style="--i:1;">Se connecter</a>
@@ -36,15 +36,24 @@
                     <?php } ?>
                     
                     <?php if (isset($_SESSION['logged']) && $_SESSION['logged']) { ?>
-                        <a href="?page=disconnect">Se déconnecter</a>
-                        <a href="?page=shoppingcart">     
-                            <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="?page=disconnect" style="--i:3;"> Se déconnecter</a>
+                    
+                        <a href="?page=shoppingcart">
+                                <i class="fa-solid fa-cart-shopping" style="--i4;"></i>
+                                <span> 
+                                <?php if(is_null($_SESSION['cart'])){
+                                    echo 0;
+                                }else{
+                                    echo count($_SESSION['cart']);
+                                }?>
+                                </span>   
                         </a>
+
                     <?php } ?>
 
-                    <?php if (isset($_SESSION['admin']) && $_SESSION['admin']) { ?>
+                    <!-- <?php // if (isset($_SESSION['admin']) && $_SESSION['admin']) { ?>
                         <a href="?page=login" style="--i:1;">Administration</a>
-                    <?php } ?>
+                    <?php // } ?> -->
                 </nav>
 
             <?php ?>

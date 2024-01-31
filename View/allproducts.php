@@ -9,12 +9,17 @@
                 <div>
                     <h2 id="productName"><?= $product['name']?></h2>
                     
-                    <a href="?page=delete_product">
+
+                    <?php if (isset($_SESSION['admin']) && $_SESSION['admin']) { ?>
+                        
+                    <a href="?page=edit_product&product_id=<?= $product['id'] ?>">
+                        <i class="fa-solid fa-pencil"></i>
+                    </a>
+            
+                    <a href="?page=delete_product&product_id=<?= $product['id'] ?>">
                         <i class="fa-solid fa-trash"></i>
                     </a>
-
-
-
+                    <?php } ?>
 
                     <?= $product['description']?>
 

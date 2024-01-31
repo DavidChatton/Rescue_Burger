@@ -73,6 +73,7 @@
     text-decoration: none;
     font-weight: 500;
     margin-left: 2.5rem;
+    position: relative;
   }
 
   #check {
@@ -370,7 +371,35 @@ h2 {
     height: 5rem;
     width: 9rem;
   }
+  .title-contact {
+    color: white;
+  }
+  .title-contact + p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.card-number {
+  border-radius: 50%;
+  background-color: #0436b2;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+  top: -3.2rem;
+  left: 29rem;
+}
 
+span {
+  position: absolute;
+  top: -24px;
+  right: -40px;
+}
+
+
+
+
+.fa-cart-shopping {
+  position: absolute;
+}
 /* RESPONSIVE */
 
   @media (max-width: 992px) {
@@ -380,7 +409,8 @@ h2 {
     }
 
   }
-
+/* parent relatif
+span enfant en absolute  */
   @media (max-width: 768px) {
 
     /* NAVBAR MOBILE */
