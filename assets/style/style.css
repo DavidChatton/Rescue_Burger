@@ -1,100 +1,202 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
-
-
 * {
     /* font-family: "Noto Sans Glagolitic", sans-serif; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
   }
-
   body {
     background-color:#0f0e17;
   }
-   /* DEBUT NAVBAR */
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 0.8rem 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    background-color:#0f0e17;
-    box-shadow: 5px 8px 15px -13px rgb(255 255 255);
-  }
-
-  .favicon {
-    width: 5rem;
-    height: 5rem;
-    filter: drop-shadow(0 0 20px #0f0e17)
-  }
-
-  header::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(50px);
-    z-index: -1;
-  }
-
-  .header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4),transparent);
-    transition: .5s
-  }
-
-  header:hover::after {
-    left:100%;
-  }
-  
-  .icon-menu { /* Icone Homepage Page Login */
-    width: 10rem;
-    height: 10rem;
-    align-items: center;
-  }
-
-  .navbar a {
-    
-    font-size: 1.5rem;
+  /*------------------------------------------FOOTER------------------------------------------*/
+  footer{
     color: white;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 2.5rem;
+    margin-top: auto;
+    text-align: center;
     position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
   }
-
-  #check {
-    display: none;
+  .separating {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
   }
-
-  .icons {
+  hr{
+    width: 50%;
+    margin-bottom: 0.5rem;
+  }
+  /*--------------------------------------------- FIN DU FOOTER ------------------------------------------------*/
+  /*--------------------------------------------- NAVBAR ------------------------------------------------*/
+     .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0.8rem 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      background-color:#0f0e17;
+      box-shadow: 5px 8px 15px -13px rgb(255 255 255);
+    }
+    .favicon {
+      width: 5rem;
+      height: 5rem;
+      filter: drop-shadow(0 0 20px #0f0e17)
+    }
+    header::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(50px);
+      z-index: -1;
+    }
+    .header::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4),transparent);
+      transition: .5s
+    }
+    header:hover::after {
+      left:100%;
+    }
+    .icon-menu {
+      width: 10rem;
+      height: 10rem;
+      align-items: center;
+    }
+    .navbar a {
+      
+      font-size: 1.5rem;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 2.5rem;
+      position: relative;
+    }
+    #check {
+      display: none;
+    }
+    .icons {
+      position: absolute;
+      right: 5%;
+      top: 0;
+      font-size: 2.8rem;
+      color: white;
+      cursor: pointer;
+      display: inline-flex;
+    }
+    .icons #close-icon {
+      display: none;
+    }
+/*--------------------------------------------- FIN NAVBAR ------------------------------------------------*/
+/*--------------------------------------------- PAGE REGISTER ------------------------------------------------*/
+  form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.047);
     position: absolute;
-    right: 5%;
-    font-size: 2.8rem;
+    transform: translate(-50%, -50%);
+    top: 55%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+    z-index: 1;
     color: white;
+  }
+  form h3 {
+    color: #FC842C;
+    font-size: 32px;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+  }
+  .input-group {
+    position: relative;
+    margin: 5px 0px 1rem 0px;
+  }
+  input,
+  textarea {
+    color: #282828;
+    display: block;
+    height: 50px;
+    width: 95%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+  }
+  input[type="text"],input[type="email"],input[type="password"]  {
+      padding-left: 30px; /* Ajouter du padding à gauche pour éviter que le texte ne soit caché sous l'icône */
+  }
+  .input-group-password {
+      position: relative;
+      margin: 5px 0px 5px 0px;
+  }
+  .error-password {
+      color: #da5e5c;
+      margin-bottom: 1rem;
+  }
+  .btn-create-account{
     cursor: pointer;
-    display: inline-flex;
-    right: 5%;
   }
-
-  .icons #close-icon {
-    display: none;
+  .btn-create-account:hover {
+    background-color:#E6E6E6;
   }
-  /* FIN NAVBAR */
-  
+  .register-footer {
+      text-align: center;
+      margin-top: 1rem;
+  }
+  .register-footer a {
+      text-decoration: none;
+      color: #FC842C;
+  }
+  .input-icon-eye {
+      color: #888888;
+      position: absolute;
+      right: 5rem;
+      top: 2.6rem;
+  }
+  /*--------------------------------------------- FIN PAGE REGISTER ----------------------------------------------*/
+  /*--------------------------------------------- PAGE LOGIN --------------------------------*/
+  .btn-login {
+    margin-top: 1rem;
+    width: 95%;
+    background-color: #d01a1a83;
+    color: #ffffff;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  /*----------------------------------------- FIN PAGE LOGIN -------------------------------*/
   a {
     text-decoration: none;
   }
@@ -103,16 +205,13 @@
     font-family: 'Nunito', sans-serif;
     text-align: center;
   }
-
   .img-card {
     width: 100%;
     border-radius: 1rem;
   }
-
   .card-content {
     padding: 10px;
   }
-
   .card {
     padding: 1rem;
     width: 300px;
@@ -123,7 +222,6 @@
     border-radius: 1rem;
     position: relative;
   }
-  
   .background-card {
     display: flex;
     justify-content: center;
@@ -131,21 +229,6 @@
     margin-top: 2rem;
     flex-wrap: wrap;
   }
- 
-  input,
-  textarea {
-    color: white;
-    display: block;
-    height: 50px;
-    width: 95%;
-    background-color: rgba(0, 0, 0, 0.07);
-    border-radius: 3px;
-    padding: 0 10px;
-    margin-top: 8px;
-    font-size: 14px;
-    font-weight: 300;
-  }
-
   label {
     color: white;
     display: block;
@@ -153,29 +236,18 @@
     font-size: 16px;
     font-weight: 500;
   }
-
   .card-title h3 {
     font-size: xx-large;
-  }
-
-  form h3 {
-    color: white;
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 42px;
-    text-align: center;
   }
   btn-category {
     border-radius: 50%;
     background: #a92c28;
     height: 50px;
   }
-
   .product-price {
     font-size: 1.25rem;
     font-weight: 600;
   }
-
   .btn-product {
     background-color: #ff8906;
     height: 3rem;
@@ -188,48 +260,25 @@
   .bx {
     visibility: hidden;
   }
-
-  .separating {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-
-  hr{
-    width: 50%;
-  }
-
-  footer{
-    color: white;
-    margin-top: auto;
-    text-align: center;
-
-  }
   /* SHOPPING CART */
-
   section {
     padding: 20px;
   }
-
   table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10rem;
   }
-
   th, td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
     color: white;
   }
-
   td {
     color: #fff;
   }
   /* FIN SHOOPING CART */
-
 .checkout-btn {
     background-color: #4caf50;
     color: #fff;
@@ -239,15 +288,9 @@
     display: inline-block;
     margin-top: 10px;
 }
-
 .btn-delete-categorie {
   background: darkred;
 }
-
-.card-icones {
-
-}
-
 .card-title-categorie {
   display: flex;
   justify-content: space-between;
@@ -302,59 +345,15 @@ h1 {
 h2 {
   color: black;
 }
-
   /* BREAKPOINT */
-   form {
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.047);
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 55%;
-    left: 50%;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-    padding: 50px 35px;
-    z-index: 1;
-    color: white;
-  }
-  
-  
-  form h3 {
-    color: white;
-    margin-bottom: 2rem;
-    font-weight: 500;
-    line-height: 42px;
-    text-align: center;
-  }
-  .submit {
-    margin-top: 50px;
-    width: 100%;
-    background-color: #d01a1a83;
-    color: #ffffff;
-    padding: 15px 0;
-    font-size: 18px;
-    font-weight: 500;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 2;
-  }
-  
-  
   .container {
     padding: 2rem;
   }
-  
-  
    #add-parent {
     display: flex;
     justify-content: center;
     margin-top: 2%;
   } 
-  
    #add {
     cursor: pointer;
   }
@@ -387,49 +386,35 @@ h2 {
   top: -3.2rem;
   left: 29rem;
 }
-
 span {
   position: absolute;
   top: -24px;
   right: -40px;
 }
-
-
-
-
 .fa-cart-shopping {
   position: absolute;
 }
 /* RESPONSIVE */
-
   @media (max-width: 992px) {
     /* NAVBAR */
     .header {
         padding: 0.8rem 5%;
     }
-
   }
-/* parent relatif
-span enfant en absolute  */
   @media (max-width: 768px) {
-
     /* NAVBAR MOBILE */
     .icons {
         display: inline-flex;
     }
-
     #check:checked~.icons #menu-icon{
       display: none;
     }
-
     .icons #close-icon {
       display: none;
     }
-
     #check:checked~.icons #close-icon{
       display: block;
     }
-
     .navbar {
       position: absolute;
       top: 100%;
@@ -441,11 +426,10 @@ span enfant en absolute  */
       box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
       overflow: hidden;
       transition: .3s ease;
-  }
+    }
     #check:checked~.navbar{
         height: 17.7rem;
     }
-
     .navbar a {
       display: block;
       font-size: 1.1rem;
@@ -454,14 +438,12 @@ span enfant en absolute  */
       transform: translateY(-50px);
       opacity: 0;
       transition: .3s ease;  
-  }
-
+    }
     #check:checked~.navbar a {
         transform: translateY(0px);
         opacity: 1;
         transition-delay: calc(.15s * var(--i));
     }
-
     #add_student>a {
       display: flex;
       flex-wrap: wrap;
@@ -470,9 +452,8 @@ span enfant en absolute  */
       color: black;
     }
     /* FIN NAVBAR MOBILE */
-
     form {
-      width: 228px;
+      width: 300px;
       display: flex;
       flex-direction: column;
       background-color: rgba(255, 255, 255, 0.047);
@@ -487,20 +468,16 @@ span enfant en absolute  */
       padding: 50px 35px;
       z-index: 1;
     }
-    
     .card {
       padding: 1rem;
       margin: 1rem;
       width: 35vh;
     }
-
     h1 {
       margin-top: 10rem;
       text-align: center;
       color: white;
     }
-
-
     .background-card {
       display: flex;
       justify-content: center;
@@ -510,7 +487,6 @@ span enfant en absolute  */
       margin-top: 2rem;
       flex-wrap: wrap;
     }
-
     main {
       display: flex;
       flex-direction: column;
@@ -526,7 +502,6 @@ span enfant en absolute  */
     align-items: center;
     white-space: nowrap;
     }
-
     .bx {
       visibility:visible;
     }

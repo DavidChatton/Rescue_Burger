@@ -39,7 +39,7 @@
                         <a href="?page=disconnect" style="--i:3;"> Se déconnecter</a>
                     
                         <a href="?page=shoppingcart">
-                                <i class="fa-solid fa-cart-shopping" style="--i4;"></i>
+                                <i class="fa-solid fa-cart-shopping" style="--i:4;"></i>
                                 <span> 
                                 <?php if(is_null($_SESSION['cart'])){
                                     echo 0;
@@ -64,13 +64,13 @@
     <main>
         <?php require 'Controller/' . $route . '_controller.php'; ?>
     </main>
-    <div class="separating">
-        <hr>
-    </div>
-
     <footer>
+        <div class="separating">
+        <hr>
+        </div>
         <p>©2024 RESCUE BURGER. All Rights Reserved. Privacy • Terms & Conditions • Contact</p> 
     </footer>
+    <script src = "index.js"></script>
     <script src="Controller/shoppingcart_controller.js"></script> 
 </body>
 

@@ -3,10 +3,6 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['token']) && $_POST['token'] === $_SESSION['token']) {
 
 
-    echo '<pre>';
-    print_r($_POST['name']);
-    echo '</pre>';
-
     $email =  filter_var($_POST['email']);
     $password = $_POST['password'];
 
@@ -22,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['token']) && $_POST['t
         $_SESSION['admin'] = $user['is_admin'];
         
         header('Location: ?page=homepage');
+
         exit();
 
     } else {

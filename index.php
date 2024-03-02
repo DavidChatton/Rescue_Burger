@@ -23,12 +23,11 @@ $availableRoutes = [
 'edit_product',
 'delete_product'
 ];
-/* echo 'page: '.$_GET['page']; */
+
 $route = 'homepage';
 
 if (isset($_GET['page']) && in_array($_GET['page'], $availableRoutes)) {
     $route = $_GET['page'];
-    //die($route);
 }
 
 $verifLoggedRoutes = ['login', 'homepage', 'show_student', 'register', 'allproducts', 'add_categorie','edit_categorie','delete_categorie','add_product','delete_product', 'shoppingcart', 'edit_product'];
@@ -37,7 +36,7 @@ if (!isset($_SESSION['logged']) && !in_array($_GET['page'], $verifLoggedRoutes))
     header('location: ?page=homepage');
     exit();
 }
-/* echo $route; */
+
 require 'View/layout.php';
 
 

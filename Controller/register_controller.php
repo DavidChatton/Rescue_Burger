@@ -2,11 +2,6 @@
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST'  && isset($_POST['token']) && $_POST['token'] === $_SESSION['token']) {
 
-
-    echo '<pre>';
-    print_r($_POST['name']);
-    echo '</pre>';
-
     $error = false;
 
     if (!empty($_POST)) {

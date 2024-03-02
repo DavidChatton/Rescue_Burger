@@ -2,7 +2,6 @@ function addToCart (event,id) {
   event.preventDefault();
     console.log(id);
  
-
     const form = new FormData();
     form.append("id", id);
 
@@ -16,7 +15,7 @@ function addToCart (event,id) {
     })
     .then(response => response.json()) // transformation de la réponse en json
     .then(response => {
-      console.log(response); // gestion de la réponse
+      console.log(response);
     })
     .catch(error => console.error('fetch error')
       
